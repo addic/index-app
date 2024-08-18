@@ -28,3 +28,11 @@ export function formatPrice(price?: number | bigint | null) {
     .format(price)
     .toString()
 }
+
+export function formatDate(date: number | Date) {
+  return Intl.DateTimeFormat('en', {
+    dateStyle: 'short',
+  })
+    .format(date)
+    .toString()
+}

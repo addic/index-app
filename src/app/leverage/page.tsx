@@ -3,6 +3,7 @@
 import { useDisclosure } from '@chakra-ui/react'
 import { PopupButton } from '@typeform/embed-react'
 
+import { UserHoldings } from '@/app/leverage/components/user-holdings'
 import { useLeverageToken } from '@/app/leverage/provider'
 import { SelectTokenModal } from '@/components/swap/components/select-token-modal'
 import { BTC, ETH } from '@/constants/tokens'
@@ -13,7 +14,6 @@ import { LeverageWidget } from './components/leverage-widget'
 import { Stats } from './components/stats'
 import { Title } from './components/title'
 import TradingViewWidget from './components/trading-view-widget'
-import { YourTokens } from './components/your-tokens'
 
 const surveyTracking = { utm_source: 'app' }
 
@@ -42,7 +42,7 @@ export default function Page() {
           </div>
           <div className='flex flex-col gap-6 lg:flex-row'>
             <div className='h-full w-full lg:min-w-[67%] lg:max-w-[67%]'>
-              <YourTokens />
+              <UserHoldings />
             </div>
             <PopupButton
               id='ywmAsQxf'

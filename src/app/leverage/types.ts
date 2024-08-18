@@ -16,3 +16,8 @@ export type EnrichedToken = Token & {
   size?: string
   leverageType?: LeverageType | null
 }
+
+export enum WidgetTab {
+  YOUR_TOKENS = 'Your Tokens',
+  HISTORY = 'History',
+}

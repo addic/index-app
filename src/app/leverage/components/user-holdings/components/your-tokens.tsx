@@ -2,11 +2,11 @@ import clsx from 'clsx'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
-import { LeverageType, useLeverageToken } from '../provider'
-import { EnrichedToken } from '../types'
-import { fetchLeverageTokenPrices } from '../utils/fetch-leverage-token-prices'
-import { getLeverageBaseToken } from '../utils/get-leverage-base-token'
-import { getLeverageType } from '../utils/get-leverage-type'
+import { LeverageType, useLeverageToken } from '../../../provider'
+import { EnrichedToken } from '../../../types'
+import { fetchLeverageTokenPrices } from '../../../utils/fetch-leverage-token-prices'
+import { getLeverageBaseToken } from '../../../utils/get-leverage-base-token'
+import { getLeverageType } from '../../../utils/get-leverage-type'
 
 const leverageTypeLabels = {
   [LeverageType.Long2x]: '2x LONG',
@@ -50,8 +50,7 @@ export function YourTokens() {
   }
 
   return (
-    <div className='border-ic-gray-600 w-full rounded-3xl border bg-[#1C2C2E]'>
-      <h3 className='text-ic-white p-6 font-bold'>Your Tokens</h3>
+    <>
       <div className='border-ic-gray-600 flex w-full border-b px-6 pb-3'>
         <div className='text-ic-gray-400 w-1/2 sm:w-1/3 md:w-3/12'>Token</div>
         <div className='text-ic-gray-400 w-1/2 sm:w-1/3 md:w-4/12'>
@@ -113,6 +112,6 @@ export function YourTokens() {
           ))
         )}
       </div>
-    </div>
+    </>
   )
 }
